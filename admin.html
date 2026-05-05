@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel | Enter Attendance Percentage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card" style="max-width: 650px;">
+    <div class="header">
+      <h1>📊 Attendance Management</h1>
+      <div class="sub">Enter attendance percentage for each student (0-100%)</div>
+    </div>
+
+    <table class="attendance-table">
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Roll No</th>
+          <th>Attendance Percentage (%)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Arun Kumar</td>
+          <td>101</td>
+          <td>
+            <input type="number" id="arun_percent" class="percentage-input" min="0" max="100" step="1" value="0" placeholder="0-100">
+          </td>
+        </tr>
+        <tr>
+          <td>Kiran Rao</td>
+          <td>102</td>
+          <td>
+            <input type="number" id="kiran_percent" class="percentage-input" min="0" max="100" step="1" value="0" placeholder="0-100">
+          </td>
+        </tr>
+        <tr>
+          <td>Priya Sharma</td>
+          <td>103</td>
+          <td>
+            <input type="number" id="priya_percent" class="percentage-input" min="0" max="100" step="1" value="0" placeholder="0-100">
+          </td>
+        </tr>
+        <tr>
+          <td>Rahul Verma</td>
+          <td>104</td>
+          <td>
+            <input type="number" id="rahul_percent" class="percentage-input" min="0" max="100" step="1" value="0" placeholder="0-100">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button id="adminSaveBtn">💾 Save Attendance Percentages</button>
+    <div id="adminMsg" class="message-area" style="display: none;"></div>
+    
+    <div id="lastUpdatedInfo" style="font-size: 0.7rem; color: #6c8db0; text-align: center; margin-top: 0.8rem;"></div>
+    
+    <hr>
+    <a href="index.html" class="back-link">← Logout / Return to Login</a>
+    <div class="footer-note">* Enter percentage between 0 and 100 for each student</div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
