@@ -3,34 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Dashboard | Attendance System</title>
+  <title>Student Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="card" style="max-width: 540px;">
     <div class="header">
       <h1>Student Dashboard</h1>
-      <div class="sub">View your attendance percentage</div>
+      <div class="sub">View your status</div>
     </div>
 
-    <!-- Profile section loaded dynamically -->
     <div id="studentProfileContainer"></div>
-
-    <!-- Button to check attendance - only this triggers percentage display -->
-    <button id="checkAttendanceBtn" style="margin-top: 0.25rem;">📊 Check My Attendance</button>
-
-    <!-- Attendance percentage appears here after clicking the button -->
+    <button id="checkAttendanceBtn">📊 Check My Attendance</button>
     <div id="attendanceResult"></div>
-
-    <!-- Warning or success messages container -->
     <div id="warningContainer"></div>
 
-    <br><br>
-    <a href="history.html" class="back-link">📅 View Attendance History</a>
-
     <hr>
-    <a href="index.html" class="back-link">← Sign out</a>
-    <div class="footer-note">Click the button above to view your current attendance percentage</div>
+    <a href="home.html" class="back-link">← Back to Home</a>
   </div>
   <script src="script.js"></script>
 </body>

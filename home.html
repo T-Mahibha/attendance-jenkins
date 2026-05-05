@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Attendance System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card" style="max-width: 500px; text-align: center;">
+    <div class="header">
+      <h1>Welcome</h1>
+      <div class="sub" id="welcomeUser">Access your portal below</div>
+    </div>
+
+    <div id="adminOptions" style="display: none;">
+      <p style="margin-bottom: 1.5rem; color: #5b6e8c;">Logged in as: <strong>Faculty Administrator</strong></p>
+      <a href="admin.html"><button>📝 Manage Attendance</button></a>
+    </div>
+
+    <div id="studentOptions" style="display: none;">
+      <p style="margin-bottom: 1.5rem; color: #5b6e8c;">Logged in as: <strong id="displayStudentName">Student</strong></p>
+      <a href="dashboard.html"><button>📊 View Dashboard</button></a>
+    </div>
+
+    <hr>
+    <a href="index.html" class="back-link" onclick="localStorage.removeItem('key')">← Logout</a>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const userKey = localStorage.getItem("key");
+    if (userKey === 'admin') {
+      document.getElementById('adminOptions').style.display = 'block';
+    } else if (userKey) {
+      document.getElementById('studentOptions').style.display = 'block';
+      document.getElementById('displayStudentName').innerText = userKey.toUpperCase();
+    } else {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

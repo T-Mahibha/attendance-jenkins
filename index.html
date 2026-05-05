@@ -37,10 +37,6 @@
   <script src="script.js"></script>
   <script>
     document.getElementById('loginBtn')?.addEventListener('click', login);
-    const inputs = document.querySelectorAll('input');
-    inputs.forEach(inp => inp.addEventListener('keypress', (e) => { 
-      if(e.key === 'Enter') login(); 
-    }));
   </script>
 </body>
 </html>
